@@ -2,154 +2,211 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100 px-6 py-10 md:px-20 font-sans">
-      {/* Header */}
-      <header className="flex justify-between items-center border-b border-slate-800 pb-6 mb-16 max-w-7xl mx-auto">
-        <div className="flex flex-col">
-          <span className="text-xl font-bold tracking-widest text-white">
-            MIRAI <span className="text-blue-500">FINANCIAL </span>
-          </span>
-          <span className="text-[10px] tracking-widest text-slate-400 uppercase">
-            Solutions, LLC
-          </span>
+    // Base container: Soft warm cream background inspired by the design palette
+    <main className="min-h-screen bg-[#EFECE6] text-[#2C2C2E] font-sans relative overflow-hidden selection:bg-[#8B7EC8] selection:text-white">
+
+      {/* Ambient background blur elements mimicking the soft purple glow & gradients */}
+      <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] bg-[#D3CEE8]/50 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-[30%] right-[-10%] w-[700px] h-[700px] bg-[#E5DFD5]/80 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-[#C5BDDF]/40 rounded-full blur-[140px] pointer-events-none" />
+
+      {/* Floating Glassmorphism Navigation Bar */}
+      <header className="sticky top-6 z-50 max-w-7xl mx-auto px-6 mb-16">
+        <div className="bg-white/40 backdrop-blur-2xl border border-white/70 rounded-full shadow-[0_8px_32px_0_rgba(0,0,0,0.04)] px-8 py-4 flex justify-between items-center transition-all duration-300">
+
+          {/* Logo Section */}
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2">
+              <span className="text-xl font-extrabold tracking-tight text-[#1C1C1E]">
+                MIRAI
+              </span>
+            </div>
+            <span className="text-[9px] tracking-[0.2em] text-[#8E8E93] uppercase font-medium">
+              Financial Solutions, LLC
+            </span>
+          </div>
+
+          {/* Navigation Links */}
+          <nav className="hidden md:flex space-x-8 text-sm font-medium text-[#636366]">
+            <a href="#services" className="hover:text-[#1C1C1E] transition-colors">Services</a>
+            <a href="#about" className="hover:text-[#1C1C1E] transition-colors">About</a>
+            <a href="#contact" className="hover:text-[#1C1C1E] transition-colors">Contact</a>
+          </nav>
+
+          {/* Pill Button Style matching the black CTAs in the reference image */}
+          <a
+            href="#contact"
+            className="text-xs bg-[#1C1C1E] hover:bg-[#3A3A3C] text-white font-medium px-6 py-2.5 rounded-full shadow-sm transition-all duration-300"
+          >
+            Consultation
+          </a>
         </div>
-        <nav className="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-          <a href="#services" className="hover:text-blue-400 transition-colors">Services</a>
-          <a href="#about" className="hover:text-blue-400 transition-colors">About</a>
-          <a href="#contact" className="hover:text-blue-400 transition-colors">Contact</a>
-        </nav>
-        <a
-          href="#contact"
-          className="text-xs bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded border border-slate-700 transition-all"
-        >
-          Consultation
-        </a>
       </header>
 
-      <div className="max-w-7xl mx-auto space-y-24">
-        {/* Main Banner */}
-        <section className="max-w-3xl pt-8">
-          <div className="inline-block bg-blue-950/60 border border-blue-800 text-blue-400 text-xs px-3 py-1 rounded-full mb-6 font-mono">
-            Bookkeeping & Financial Solutions
+      {/* Main Content Layout */}
+      <div className="max-w-7xl mx-auto px-6 space-y-28 relative z-10">
+
+        {/* Hero Section */}
+        <section className="max-w-3xl pt-6">
+          {/* Tag element */}
+          <div className="inline-flex items-center gap-2.5 bg-white/50 backdrop-blur-md border border-white/80 text-[#48484A] text-xs px-4 py-1.5 rounded-full mb-8 shadow-sm">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8B7EC8] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#6B5DA8]"></span>
+            </span>
+            <span className="font-medium tracking-wide">Next-Gen Bookkeeping & Financial Intelligence</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 text-white">
+
+          {/* Main Title with Lavender-Purple Gradient Card Integration */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6 text-[#1C1C1E]">
             Clarity in Numbers. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B5DA8] via-[#8B7EC8] to-[#4A3E85]">
               Confidence in Growth.
             </span>
           </h1>
-          <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-8">
-            At Mirai Financial Solutions, LLC, we deliver accurate bookkeeping and tailored financial insights so you can focus on scaling your business.
+
+          <p className="text-[#636366] text-base sm:text-lg leading-relaxed mb-10 max-w-2xl font-normal">
+            At Mirai Financial Solutions, LLC, we combine precision bookkeeping with modern financial insights, empowering your business to navigate the future with confidence.
           </p>
+
+          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
+            {/* Gradient Glass Card Accent Button */}
             <a
               href="#contact"
-              className="bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded text-center transition-colors shadow-lg shadow-blue-900/20"
+              className="relative group overflow-hidden bg-gradient-to-r from-[#7A6BB9] to-[#5C4D9A] text-white font-medium px-8 py-4 rounded-2xl transition-all shadow-md shadow-[#7A6BB9]/20 hover:shadow-lg hover:shadow-[#7A6BB9]/30"
             >
-              Get Free Financial Assessment
+              <span className="relative z-10">Get Free Financial Assessment</span>
+              <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
+
+            {/* Frosted Glass Secondary Button */}
             <a
               href="#services"
-              className="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-medium px-6 py-3 rounded text-center transition-colors"
+              className="bg-white/40 hover:bg-white/60 backdrop-blur-md border border-white/80 text-[#2C2C2E] font-medium px-8 py-4 rounded-2xl text-center transition-all shadow-sm"
             >
               Explore Our Services
             </a>
           </div>
         </section>
 
-        {/* Services Overview */}
-        <section id="services" className="pt-12 border-t border-slate-800/80">
+        {/* Services Section */}
+        <section id="services" className="pt-8">
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-white mb-2">Our Core Services</h2>
-            <p className="text-slate-400 text-sm">Comprehensive bookkeeping & accounting support tailored for growing enterprises.</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1C1C1E] tracking-tight mb-3">
+              Our Core Solutions
+            </h2>
+            <p className="text-[#8E8E93] text-sm max-w-xl">
+              Precision-driven financial and bookkeeping services engineered for modern enterprises.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 bg-slate-900/60 rounded-lg border border-slate-800 hover:border-slate-700 transition-all">
-              <div className="w-10 h-10 bg-blue-950 rounded flex items-center justify-center text-blue-400 font-bold mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            {/* Service Card 1: Featuring Purple Gradient Background Card Effect */}
+            <div className="group relative bg-gradient-to-br from-[#8B7EC8]/90 to-[#6B5DA8] backdrop-blur-2xl rounded-3xl p-8 border border-white/40 text-white shadow-[0_10px_30px_rgba(107,93,168,0.15)] hover:shadow-[0_15px_35px_rgba(107,93,168,0.25)] transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white font-mono font-bold text-sm mb-6 border border-white/30">
                 01
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Full-Charge Bookkeeping</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Daily transaction categorization, bank reconciliations, and clean ledger management to keep your books audit-ready.
+              <h3 className="text-lg font-bold text-white mb-3">
+                Full-Charge Bookkeeping
+              </h3>
+              <p className="text-white/80 text-sm leading-relaxed">
+                Daily transaction categorization, precise bank reconciliations, and audit-ready ledger management powered by clean workflows.
               </p>
             </div>
 
-            <div className="p-6 bg-slate-900/60 rounded-lg border border-slate-800 hover:border-slate-700 transition-all">
-              <div className="w-10 h-10 bg-blue-950 rounded flex items-center justify-center text-blue-400 font-bold mb-4">
+            {/* Service Card 2: Soft White Glassmorphism */}
+            <div className="group relative bg-white/40 backdrop-blur-2xl rounded-3xl p-8 border border-white/80 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 bg-[#8B7EC8]/10 rounded-2xl flex items-center justify-center text-[#6B5DA8] font-mono font-bold text-sm mb-6 border border-[#8B7EC8]/20 group-hover:scale-105 transition-transform">
                 02
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Financial Reporting</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Clear Balance Sheets, P&L statements, and Cash Flow insights delivered monthly to guide strategic decisions.
+              <h3 className="text-lg font-bold text-[#1C1C1E] mb-3 group-hover:text-[#6B5DA8] transition-colors">
+                Financial Reporting
+              </h3>
+              <p className="text-[#636366] text-sm leading-relaxed">
+                Real-time Income Statements, Balance Sheets, and Cash Flow metrics structured to give you absolute clarity for decisions.
               </p>
             </div>
 
-            <div className="p-6 bg-slate-900/60 rounded-lg border border-slate-800 hover:border-slate-700 transition-all">
-              <div className="w-10 h-10 bg-blue-950 rounded flex items-center justify-center text-blue-400 font-bold mb-4">
+            {/* Service Card 3: Soft White Glassmorphism */}
+            <div className="group relative bg-white/40 backdrop-blur-2xl rounded-3xl p-8 border border-white/80 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 bg-[#8B7EC8]/10 rounded-2xl flex items-center justify-center text-[#6B5DA8] font-mono font-bold text-sm mb-6 border border-[#8B7EC8]/20 group-hover:scale-105 transition-transform">
                 03
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Payroll & Advisory</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Streamlined payroll processing and customized financial advisory to optimize tax-readiness and profitability.
+              <h3 className="text-lg font-bold text-[#1C1C1E] mb-3 group-hover:text-[#6B5DA8] transition-colors">
+                Payroll & Advisory
+              </h3>
+              <p className="text-[#636366] text-sm leading-relaxed">
+                Seamless payroll execution and strategic advisory to minimize tax compliance burdens and optimize profitability.
               </p>
             </div>
+
           </div>
         </section>
 
         {/* Contact Form Section */}
-        <section id="contact" className="pt-12 border-t border-slate-800/80 mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-4">Ready to Optimize Your Finances?</h2>
-              <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                Send us a message to schedule a 30-minute consultation. We will discuss your current setup and how Mirai Financial Solutions can help.
-              </p>
-              <div className="space-y-3 text-xs text-slate-400">
-                <p><strong className="text-slate-200">Company:</strong> Mirai Financial Solutions, LLC</p>
-                <p><strong className="text-slate-200">Email:</strong> contact@miraifinancial.com</p>
-              </div>
-            </div>
+        <section id="contact" className="pt-8 pb-20">
+          <div className="bg-white/30 backdrop-blur-3xl rounded-[2.5rem] p-8 sm:p-12 border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.03)]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#1C1C1E] tracking-tight mb-4">
+                  Shape Your Financial Future.
+                </h2>
+                <p className="text-[#636366] text-sm sm:text-base leading-relaxed mb-8">
+                  Schedule a 30-minute introductory session with our team. We’ll review your existing books and map out a streamlined solution for Mirai Financial Solutions.
+                </p>
 
-            {/* Contact Form Structure */}
-            <form className="bg-slate-900 p-6 rounded-lg border border-slate-800 space-y-4">
-              <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1">Full Name</label>
-                <input
-                  type="text"
-                  placeholder="John Doe"
-                  className="w-full bg-slate-950 border border-slate-800 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500"
-                />
+                {/* Info Box */}
+                <div className="space-y-3 text-xs text-[#636366] bg-white/50 backdrop-blur-md p-5 rounded-2xl border border-white/80 inline-block font-mono shadow-sm">
+                  <p><span className="text-[#8E8E93]">Contact Us</span></p>
+                  <p><span className="text-[#8E8E93]">EMAIL:</span> <strong className="text-[#1C1C1E]">miraifinancialsolutions@gmail.com</strong></p>
+                </div>
               </div>
-              <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1">Work Email</label>
-                <input
-                  type="email"
-                  placeholder="john@company.com"
-                  className="w-full bg-slate-950 border border-slate-800 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1">How can we help?</label>
-                <textarea
-                  rows={3}
-                  placeholder="Tell us about your business or bookkeeping needs..."
-                  className="w-full bg-slate-950 border border-slate-800 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <button
-                type="button"
-                className="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2 rounded text-sm transition-colors"
-              >
-                Send Request
-              </button>
-            </form>
+
+              {/* Glass Input Form Container */}
+              <form className="bg-white/60 backdrop-blur-2xl p-8 rounded-3xl border border-white/90 shadow-sm space-y-4">
+                <div>
+                  <label className="block text-xs font-semibold text-[#48484A] mb-2">Full Name</label>
+                  <input
+                    type="text"
+                    placeholder="Jane Doe"
+                    className="w-full bg-white/60 border border-white/80 rounded-2xl px-4 py-3 text-sm text-[#1C1C1E] placeholder:text-[#A1A1A6] focus:outline-none focus:ring-2 focus:ring-[#8B7EC8]/40 focus:border-[#8B7EC8] focus:bg-white transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-[#48484A] mb-2">Work Email</label>
+                  <input
+                    type="email"
+                    placeholder="jane@company.com"
+                    className="w-full bg-white/60 border border-white/80 rounded-2xl px-4 py-3 text-sm text-[#1C1C1E] placeholder:text-[#A1A1A6] focus:outline-none focus:ring-2 focus:ring-[#8B7EC8]/40 focus:border-[#8B7EC8] focus:bg-white transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-[#48484A] mb-2">How can we support you?</label>
+                  <textarea
+                    rows={3}
+                    placeholder="Tell us about your company size and current bookkeeping setup..."
+                    className="w-full bg-white/60 border border-white/80 rounded-2xl px-4 py-3 text-sm text-[#1C1C1E] placeholder:text-[#A1A1A6] focus:outline-none focus:ring-2 focus:ring-[#8B7EC8]/40 focus:border-[#8B7EC8] focus:bg-white transition-all"
+                  />
+                </div>
+
+                {/* Black Pill Button matching the reference UI */}
+                <button
+                  type="button"
+                  className="w-full bg-[#1C1C1E] hover:bg-[#3A3A3C] text-white font-medium py-3.5 rounded-full text-sm transition-all duration-300 shadow-sm"
+                >
+                  Send Consultation Request
+                </button>
+              </form>
+            </div>
           </div>
         </section>
+
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-slate-900 pt-8 mt-20 text-center text-xs text-slate-600 max-w-7xl mx-auto">
+      <footer className="border-t border-[#E5E0D8] py-8 text-center text-xs text-[#8E8E93] max-w-7xl mx-auto px-6 relative z-10 font-mono">
         © {new Date().getFullYear()} Mirai Financial Solutions, LLC. All rights reserved.
       </footer>
     </main>
