@@ -1,17 +1,19 @@
+//Footer verse version
+
 import React from 'react';
 
 export default function Home() {
   return (
-    // Base container: Soft warm cream background inspired by the design palette
-    <main className="min-h-screen bg-[#EFECE6] text-[#2C2C2E] font-sans relative overflow-hidden selection:bg-[#8B7EC8] selection:text-white">
+    // Base container
+    <main className="min-h-screen bg-[#EFECE6] text-[#2C2C2E] font-sans relative overflow-x-clip selection:bg-[#8B7EC8] selection:text-white">
 
-      {/* Ambient background blur elements mimicking the soft purple glow & gradients */}
+      {/* Ambient background blur elements */}
       <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] bg-[#D3CEE8]/50 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-[30%] right-[-10%] w-[700px] h-[700px] bg-[#E5DFD5]/80 rounded-full blur-[160px] pointer-events-none" />
       <div className="absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-[#C5BDDF]/40 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Floating Glassmorphism Navigation Bar */}
-      <header className="sticky top-6 z-50 max-w-7xl mx-auto px-6 mb-16">
+      <header className="sticky top-6 z-50 max-w-7xl mx-auto px-6 mb-8">
         <div className="bg-white/40 backdrop-blur-2xl border border-white/70 rounded-full shadow-[0_8px_32px_0_rgba(0,0,0,0.04)] px-8 py-4 flex justify-between items-center transition-all duration-300">
 
           {/* Logo Section */}
@@ -21,7 +23,7 @@ export default function Home() {
                 MIRAI
               </span>
             </div>
-            <span className="text-[9px] tracking-[0.2em] text-[#8E8E93] uppercase font-medium">
+            <span className="text-[10px] tracking-[0.2em] text-[#8E8E93] uppercase font-medium">
               Financial Solutions, LLC
             </span>
           </div>
@@ -33,7 +35,7 @@ export default function Home() {
             <a href="#contact" className="hover:text-[#1C1C1E] transition-colors">Contact</a>
           </nav>
 
-          {/* Pill Button Style matching the black CTAs in the reference image */}
+          {/* Pill Button */}
           <a
             href="#contact"
             className="text-xs bg-[#1C1C1E] hover:bg-[#3A3A3C] text-white font-medium px-6 py-2.5 rounded-full shadow-sm transition-all duration-300"
@@ -44,10 +46,10 @@ export default function Home() {
       </header>
 
       {/* Main Content Layout */}
-      <div className="max-w-7xl mx-auto px-6 space-y-28 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 space-y-28 relative z-10 pt-4">
 
         {/* Hero Section */}
-        <section className="max-w-3xl pt-6">
+        <section className="max-w-3xl pt-2">
           {/* Tag element */}
           <div className="inline-flex items-center gap-2.5 bg-white/50 backdrop-blur-md border border-white/80 text-[#48484A] text-xs px-4 py-1.5 rounded-full mb-8 shadow-sm">
             <span className="relative flex h-2 w-2">
@@ -57,7 +59,7 @@ export default function Home() {
             <span className="font-medium tracking-wide">Next-Gen Bookkeeping & Financial Intelligence</span>
           </div>
 
-          {/* Main Title with Lavender-Purple Gradient Card Integration */}
+          {/* Main Title */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6 text-[#1C1C1E]">
             Clarity in Numbers. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B5DA8] via-[#8B7EC8] to-[#4A3E85]">
@@ -71,16 +73,14 @@ export default function Home() {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            {/* Gradient Glass Card Accent Button */}
             <a
               href="#contact"
-              className="relative group overflow-hidden bg-gradient-to-r from-[#7A6BB9] to-[#5C4D9A] text-white font-medium px-8 py-4 rounded-2xl transition-all shadow-md shadow-[#7A6BB9]/20 hover:shadow-lg hover:shadow-[#7A6BB9]/30"
+              className="relative group overflow-hidden bg-gradient-to-r from-[#7A6BB9] to-[#5C4D9A] text-white font-medium px-8 py-4 rounded-2xl transition-all shadow-md shadow-[#7A6BB9]/20 hover:shadow-lg hover:shadow-[#7A6BB9]/30 text-center"
             >
               <span className="relative z-10">Get Free Financial Assessment</span>
               <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
 
-            {/* Frosted Glass Secondary Button */}
             <a
               href="#services"
               className="bg-white/40 hover:bg-white/60 backdrop-blur-md border border-white/80 text-[#2C2C2E] font-medium px-8 py-4 rounded-2xl text-center transition-all shadow-sm"
@@ -102,8 +102,6 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            {/* Service Card 1: Featuring Purple Gradient Background Card Effect */}
             <div className="group relative bg-gradient-to-br from-[#8B7EC8]/90 to-[#6B5DA8] backdrop-blur-2xl rounded-3xl p-8 border border-white/40 text-white shadow-[0_10px_30px_rgba(107,93,168,0.15)] hover:shadow-[0_15px_35px_rgba(107,93,168,0.25)] transition-all duration-300 hover:-translate-y-1">
               <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white font-mono font-bold text-sm mb-6 border border-white/30">
                 01
@@ -116,7 +114,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Service Card 2: Soft White Glassmorphism */}
             <div className="group relative bg-white/40 backdrop-blur-2xl rounded-3xl p-8 border border-white/80 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1">
               <div className="w-12 h-12 bg-[#8B7EC8]/10 rounded-2xl flex items-center justify-center text-[#6B5DA8] font-mono font-bold text-sm mb-6 border border-[#8B7EC8]/20 group-hover:scale-105 transition-transform">
                 02
@@ -129,7 +126,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Service Card 3: Soft White Glassmorphism */}
             <div className="group relative bg-white/40 backdrop-blur-2xl rounded-3xl p-8 border border-white/80 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1">
               <div className="w-12 h-12 bg-[#8B7EC8]/10 rounded-2xl flex items-center justify-center text-[#6B5DA8] font-mono font-bold text-sm mb-6 border border-[#8B7EC8]/20 group-hover:scale-105 transition-transform">
                 03
@@ -141,12 +137,11 @@ export default function Home() {
                 Seamless payroll execution and strategic advisory to minimize tax compliance burdens and optimize profitability.
               </p>
             </div>
-
           </div>
         </section>
 
         {/* Contact Form Section */}
-        <section id="contact" className="pt-8 pb-20">
+        <section id="contact" className="pt-8 pb-12">
           <div className="bg-white/30 backdrop-blur-3xl rounded-[2.5rem] p-8 sm:p-12 border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.03)]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -154,13 +149,12 @@ export default function Home() {
                   Shape Your Financial Future.
                 </h2>
                 <p className="text-[#636366] text-sm sm:text-base leading-relaxed mb-8">
-                  Schedule a 30-minute introductory session with our team. We’ll review your existing books and map out a streamlined solution for Mirai Financial Solutions.
+                  Schedule a 30-minute introductory session with our team. We will review your existing books and map out a streamlined solution for Mirai Financial Solutions.
                 </p>
 
-                {/* Info Box */}
                 <div className="space-y-3 text-xs text-[#636366] bg-white/50 backdrop-blur-md p-5 rounded-2xl border border-white/80 inline-block font-mono shadow-sm">
                   <p><span className="text-[#8E8E93]">Contact Us</span></p>
-                  <p><span className="text-[#8E8E93]">EMAIL:</span> <strong className="text-[#1C1C1E]">miraifinancialsolutions@gmail.com</strong></p>
+                  <p><span className="text-[#8E8E93]">EMAIL:</span> <strong className="text-[#1C1C1E]">advisor@miraifinancialsolutions.com</strong></p>
                 </div>
               </div>
 
@@ -191,7 +185,6 @@ export default function Home() {
                   />
                 </div>
 
-                {/* Black Pill Button matching the reference UI */}
                 <button
                   type="button"
                   className="w-full bg-[#1C1C1E] hover:bg-[#3A3A3C] text-white font-medium py-3.5 rounded-full text-sm transition-all duration-300 shadow-sm"
@@ -206,8 +199,21 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-[#E5E0D8] py-8 text-center text-xs text-[#8E8E93] max-w-7xl mx-auto px-6 relative z-10 font-mono">
-        © {new Date().getFullYear()} Mirai Financial Solutions, LLC. All rights reserved.
+      <footer className="mt-16 py-12 max-w-7xl mx-auto px-6 relative z-10 text-center">
+        {/* Bible Verse */}
+        <div className="max-w-xl mx-auto mb-6">
+          <p className="text-xs sm:text-sm italic text-[#636366] font-serif tracking-wide leading-relaxed">
+            &ldquo;For I know the plans I have for you,&rdquo; declares the Lord, &ldquo;plans to prosper you and not to harm you, plans to give you hope and a future.&rdquo;
+          </p>
+          <span className="block mt-2 text-[10px] font-mono tracking-[0.2em] text-[#8B7EC8] uppercase">
+            — Jeremiah 29:11
+          </span>
+        </div>
+
+        {/* Copyright Information */}
+        <div className="border-t border-[#E5E0D8] py-8 text-center text-xs text-[#8E8E93] max-w-7xl mx-auto px-6 relative z-10 font-mono">
+          © {new Date().getFullYear()} Mirai Financial Solutions, LLC. All rights reserved.
+        </div>
       </footer>
     </main>
   );
